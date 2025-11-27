@@ -116,3 +116,9 @@ Approximately 7.3% of the input power is lost due to dielectric loss (tan δ = 0
 <img width="470" height="278" alt="image" src="https://github.com/user-attachments/assets/3ed33af5-c4c6-46e7-a8ed-02fefd747410" /> Figure 8: 35mm
 
 Using TXLINE with the substrate (εr = 4.4, h = 1.5 mm, W = 2.793 mm), the guided wavelength at 2 GHz is approximately λg = 82 mm, and λg/2 = 41 mm. The two folded stubs in the filter have physical lengths L₁ = 40 mm and L₂ = 35 mm. TXLINE outputs electrical lengths of approximately 175° and 153°, respectively. Therefore, the first stub is essentially a half-wavelength (λg/2) resonator, while the second stub is slightly shorter than λg/2. These two staggered resonances combine to produce the wide bandpass response observed in the S-parameter plots.
+
+## 🛠️ Manufactured Filter
+
+![IMG_4663](https://github.com/user-attachments/assets/0ba3e6ee-7ce4-4e5d-b023-8d0eef17273c)
+
+
