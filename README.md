@@ -120,5 +120,51 @@ Using TXLINE with the substrate (εr = 4.4, h = 1.5 mm, W = 2.793 mm), the guide
 ## 🛠️ Manufactured Filter
 
 ![IMG_4663](https://github.com/user-attachments/assets/0ba3e6ee-7ce4-4e5d-b023-8d0eef17273c)
+Figure 9: Manufactured Filter 
+<img width="815" height="214" alt="image" src="https://github.com/user-attachments/assets/0e6054d3-9233-4948-a310-2215ef0e7ab3" />
+
+Figure 3: Parameter values of the double-folded stub filter of center frequency 1.9 GHZ
+
+The AWR schematic (Figure 1) shows the double-folded stub bandpass filter designed on FR-4 (εr = 4.4, h = 1.5 mm) using 50 Ω microstrip lines and two open-circuited stubs to shape the passband. The fabricated prototype (Figure 9) was built using copper tape cut to the simulated dimensions and soldered at the junctions, with SMA edge-launch connectors added for VNA measurement. The physical layout closely follows the simulated topology, enabling direct comparison between AWR and measured performance.
+ 
+For the reflection coefficient |S11|, the AWR simulation (Figure 2) predicts two deep return-loss minima around 1.8 GHz and 2.0 GHz with levels below –40 dB, and a –10 dB bandwidth from approximately 1.5 GHz to 2.5GHz.
+
+<img width="549" height="411" alt="image" src="https://github.com/user-attachments/assets/c5e30fdc-5283-4c31-ac52-091899537214" />
+
+Figure 10: Reflection Coefficient dB Mag Plot (VNA)
+
+The VNA measurement of the fabricated filter (Figure 10) shows a very similar response: |S11| falls below –10 dB from about 1.64 GHz to 2.48 GHz, with a minimum of roughly –35 dB near 2.1 GHz. The passband and notch shape agree well with the simulation, but the measured response is slightly shifted up in frequency, and the minimum return loss is a bit smaller in magnitude. These differences are consistent with fabrication tolerances, FR-4 dielectric variation, hand-soldered stub lengths, and the additional parasitics from SMA launch transitions.
+ 
+The simulated and measured S-parameters of the bandpass double folded-stub filter show the same overall behaviour.
+In AWR, the filter exhibits a passband centred near 2.0 GHz with S21 ≈ −1 dB and return loss better than about −20 dB, and deep transmission zeros around 1.4 GHz and 2.4 GHz where S21 drops below −50 dB.
+
+The VNA measurement (Figure 10) reproduces this shape: the passband also peaks close to 2.0 GHz, with slightly higher insertion loss (about −2 to −3 dB) and somewhat shallower notches, which can be attributed to connector loss, fabrication tolerances, and additional loss from soldered joints and the FR-4 substrate.
+
+<img width="751" height="563" alt="image" src="https://github.com/user-attachments/assets/1709bb84-fedf-498c-8b85-53734246c37c" />
+
+Figure 11: Transmission Coefficients Linear Mag Plot (VNA)
+
+<img width="766" height="575" alt="image" src="https://github.com/user-attachments/assets/d3ef095f-7abe-410b-8611-36944e17e110" />
+
+Figure 12: Transmission Coefficients Linear Mag Plot (VNA)
+
+The simulated S-parameter response of the double-folded stub bandpass filter agrees well with the VNA measurements. Both the dB-magnitude plots and the linear-magnitude plots show a passband from about 1.5–2.5 GHz with peak transmission around 0.9 (about −1 dB) and a deep transmission notch near the center of the band. Small shifts in the notch frequency and a slightly flatter measured passband are mainly due to fabrication tolerances, substrate loss, and parasitics from the SMA launches and soldered microstrip joints.
+ 
+<img width="968" height="726" alt="image" src="https://github.com/user-attachments/assets/3cf8e95f-20ec-4f6b-9814-3bbce998c914" />
+
+Figure 13: Transmission Coefficients Phase Plot (VNA)
+
+The measured transmission phase ∠S_21 from the VNA closely follows the trend predicted by the AWR simulation. In both plots, the phase is approximately linear across the passband (about 1.5–2.5 GHz), decreasing from around +180^∘near the lower edge to about -180^∘at the upper edge, which indicates an almost constant group delay through the filter in the passband. The locations of the phase wraps (±180° discontinuities) in the VNA data occur at nearly the same frequencies as in simulation, showing that the electrical length of the realized structure matches the design reasonably well. Small deviations and extra ripple in the measured phase are likely due to connector and cable effects, as well as fabrication tolerances that are not fully captured in the ideal EM model.
+ 
+<img width="975" height="731" alt="image" src="https://github.com/user-attachments/assets/764ea2a4-4fc1-4f4f-a9d5-1229d940e3c4" /> 
+
+Figure 14: Input at Port 1 S-parameter Linear Mag Plots (VNA)
+
+For the input at port 1, the simulated AWR plot (Figure 11) shows the expected bandpass behaviour:
+around 2.0 GHz the filter is well matched with ∣S_11∣≈0.015(about -36dB) and high transmission ∣S_21∣≈0.96. Away from the centre frequency, ∣S_11∣rises toward 1 while ∣S_21∣falls, indicating strong reflection at the input and very little power delivered to the load.
+
+The measured VNA data follows the same trend. ∣S_11∣starts near 0.96 at 1 GHz, drops to a minimum of about 0.05 around 1.8 to 1.9 GHz, and then increases again above 0.7 as the frequency approaches 3 GHz. This confirms that the fabricated filter presents a good input match only in the passband and reflects most of the power outside it. Compared with simulation, the measured minimum ∣S_11∣is higher and slightly shifted in frequency, and the peak ∣S_21∣level is offset. These differences are likely caused by connector and solder parasitics, finite substrate loss, and small errors in the realized stub dimensions and VNA calibration.
+
+
 
 
